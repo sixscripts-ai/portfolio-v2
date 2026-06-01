@@ -307,6 +307,7 @@ export const projects: Project[] = [
     accent: "amber",
     links: [
       { label: "Live demo", href: "https://aqentix.me/" },
+      { label: "GitHub", href: "https://github.com/sixscripts-ai/aqentix" },
       { label: "Architecture", href: "/projects/aqentix#architecture" },
       { label: "Case notes", href: "/projects/aqentix#case" },
     ],
