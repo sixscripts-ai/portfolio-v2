@@ -7,7 +7,7 @@ import { Download, Printer } from "lucide-react";
 
 export default function ResumePage() {
   return (
-    <Section eyebrow="Resume" title="One page. Engineering, not marketing.">
+    <Section eyebrow="Resume" title="Selected technical work, systems experience, and project evidence.">
       <div className="flex flex-wrap gap-3 mb-8 no-print">
         <a href={profile.resumePath} download className="btn btn-primary">
           <Download size={14} /> Download PDF
