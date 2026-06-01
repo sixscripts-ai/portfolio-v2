@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" role="img" aria-label="GhostSSH agent flow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1018"/>
+      <stop offset="100%" stop-color="#07080d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b8ff3a"/>
+      <stop offset="100%" stop-color="#5ad6ff"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b8ff3a"/>
+    </marker>
+  </defs>
+  <rect width="800" height="360" fill="url(#bg)"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo" fill="#9aa3b2" font-size="11">
+    <text x="24" y="28" fill="#6b7280" letter-spacing="2">GHOSTSSH · AGENT FLOW</text>
+    <text x="24" y="48" fill="#e7ecf3" font-family="Inter, sans-serif" font-size="18" font-weight="600">Profile sources → match → evidence log</text>
+  </g>
+  <g>
+    <!-- nodes -->
+    <g transform="translate(40,90)">
+      <rect width="180" height="56" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+      <rect width="3" height="56" fill="#b8ff3a"/>
+      <text x="14" y="26" fill="#e7ecf3" font-family="Inter, sans-serif" font-size="13" font-weight="600">GitHub / LinkedIn</text>
+      <text x="14" y="44" fill="#9aa3b2" font-family="ui-monospace, Menlo" font-size="11">extraction</text>
+    </g>
+    <g transform="translate(260,90)">
+      <rect width="180" height="56" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+      <rect width="3" height="56" fill="#5ad6ff"/>
+      <text x="14" y="26" fill="#e7ecf3" font-family="Inter, sans-serif" font-size="13" font-weight="600">Profile normalizer</text>
+      <text x="14" y="44" fill="#9aa3b2" font-family="ui-monospace, Menlo" font-size="11">structured candidate</text>
+    </g>
+    <g transform="translate(480,90)">
+      <rect width="180" height="56" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+      <rect width="3" height="56" fill="#ff5fa2"/>
+      <text x="14" y="26" fill="#e7ecf3" font-family="Inter, sans-serif" font-size="13" font-weight="600">Agent loop</text>
+      <text x="14" y="44" fill="#9aa3b2" font-family="ui-monospace, Menlo" font-size="11">plan → score → verify</text>
+    </g>
+    <g transform="translate(150,200)">
+      <rect width="180" height="56" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+      <rect width="3" height="56" fill="#ffb547"/>
+      <text x="14" y="26" fill="#e7ecf3" font-family="Inter, sans-serif" font-size="13" font-weight="600">Postgres</text>
+      <text x="14" y="44" fill="#9aa3b2" font-family="ui-monospace, Menlo" font-size="11">profiles · matches · events</text>
+    </g>
+    <g transform="translate(370,200)">
+      <rect width="180" height="56" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+      <rect width="3" height="56" fill="#b8ff3a"/>
+      <text x="14" y="26" fill="#e7ecf3" font-family="Inter, sans-serif" font-size="13" font-weight="600">Role matcher</text>
+      <text x="14" y="44" fill="#9aa3b2" font-family="ui-monospace, Menlo" font-size="11">evidence-based ranking</text>
+    </g>
+    <g transform="translate(580,200)">
+      <rect width="180" height="56" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+      <rect width="3" height="56" fill="#5ad6ff"/>
+      <text x="14" y="26" fill="#e7ecf3" font-family="Inter, sans-serif" font-size="13" font-weight="600">Evidence log</text>
+      <text x="14" y="44" fill="#9aa3b2" font-family="ui-monospace, Menlo" font-size="11">per match · auditable</text>
+    </g>
+    <!-- edges -->
+    <g fill="none" stroke="#b8ff3a" stroke-opacity="0.6" stroke-width="1.4" stroke-dasharray="4 6" marker-end="url(#ar)">
+      <path d="M 220 118 C 240 118, 240 118, 260 118"/>
+      <path d="M 440 118 C 460 118, 460 118, 480 118"/>
+      <path d="M 350 146 C 350 170, 240 180, 240 200"/>
+      <path d="M 570 146 C 570 170, 460 180, 460 200"/>
+      <path d="M 330 228 C 350 228, 350 228, 370 228"/>
+      <path d="M 550 228 C 565 228, 565 228, 580 228"/>
+      <path d="M 670 200 C 700 168, 660 130, 660 124"/>
+    </g>
+  </g>
+  <g font-family="ui-monospace, Menlo" font-size="10" fill="#6b7280">
+    <text x="24" y="332">→ extracts evidence, ranks roles, cites sources, surfaces missing-evidence gaps</text>
+  </g>
+</svg>

@@ -1,0 +1,117 @@
+%PDF-1.4
+1 0 obj
+<< /Length 3935 >>
+stream
+0 0 0 rg
+BT /F2 22 Tf 48 744 Td (Ashton Aschenbrener) Tj ET
+0.45 0.85 0.18 rg
+BT /F2 11 Tf 48 722 Td (FULL-STACK AI ENGINEER) Tj ET
+0 0 0 rg
+BT /F1 9 Tf 48 708 Td (California / Remote  ·  sixscripts@proton.me  ·  github.com/sixscripts-ai  ·  linkedin.com/in/aaschenbrener) Tj ET
+0.85 0.85 0.85 RG
+0.5 w 48 698 m 564 698 l S
+0.4 0.4 0.4 rg
+BT /F2 8.5 Tf 48 682 Td (SUMMARY) Tj ET
+0 0 0 rg
+BT /F1 10 Tf 48 669.5 Td (Full-stack AI engineer focused on retrieval systems, agentic workflows, and product interfaces) Tj ET
+BT /F1 10 Tf 48 657 Td (with Next.js, TypeScript, Python, and Postgres.) Tj ET
+0.4 0.4 0.4 rg
+BT /F2 8.5 Tf 48 640.5 Td (PROJECTS) Tj ET
+0 0 0 rg
+0.45 0.85 0.18 rg
+49 629 m 53 632 l 49 635 l f
+0 0 0 rg
+BT /F1 10 Tf 60 628 Td (Built GhostSSH, an agentic job-search workflow that extracts candidate evidence from) Tj ET
+BT /F1 10 Tf 60 615.5 Td (GitHub, LinkedIn, and portfolio data, then ranks roles through structured matching logic.) Tj ET
+0.45 0.85 0.18 rg
+49 602 m 53 605 l 49 608 l f
+0 0 0 rg
+BT /F1 10 Tf 60 601 Td (Designed ICT Knowledge Engine, an ontology-backed retrieval system that connects financial) Tj ET
+BT /F1 10 Tf 60 588.5 Td (concepts, semantic search, and graph-based exploration.) Tj ET
+0.45 0.85 0.18 rg
+49 575 m 53 578 l 49 581 l f
+0 0 0 rg
+BT /F1 10 Tf 60 574 Td (Built Campus Compass, a campus information assistant with semantic course search,) Tj ET
+BT /F1 10 Tf 60 561.5 Td (source-aware retrieval, and prerequisite graph navigation.) Tj ET
+0.45 0.85 0.18 rg
+49 548 m 53 551 l 49 554 l f
+0 0 0 rg
+BT /F1 10 Tf 60 547 Td (Developed Aqentix, a multi-location inventory intelligence concept with reorder workflows,) Tj ET
+BT /F1 10 Tf 60 534.5 Td (trend visualization, and integration-ready data modeling.) Tj ET
+0.45 0.85 0.18 rg
+49 521 m 53 524 l 49 527 l f
+0 0 0 rg
+BT /F1 10 Tf 60 520 Td (Built Webhook Replay Lab, a backend reliability tool that stores, audits, and replays) Tj ET
+BT /F1 10 Tf 60 507.5 Td (webhook deliveries with per-attempt history.) Tj ET
+0.4 0.4 0.4 rg
+BT /F2 8.5 Tf 48 491 Td (EXPERIENCE) Tj ET
+0 0 0 rg
+BT /F2 10.5 Tf 48 478.5 Td (Founder & Engineer  ·  Six Scripts Software \(Independent\)) Tj ET
+BT /F1 9 Tf 480 478.5 Td (2024 - Present) Tj ET
+0.45 0.85 0.18 rg
+49 467 m 53 470 l 49 473 l f
+0 0 0 rg
+BT /F1 9.5 Tf 60 466 Td (Ship full-stack AI products end-to-end: product, UI, backend, data model, AI workflow,) Tj ET
+BT /F1 9.5 Tf 60 454.5 Td (verification.) Tj ET
+0.45 0.85 0.18 rg
+49 444 m 53 447 l 49 450 l f
+0 0 0 rg
+BT /F1 9.5 Tf 60 443 Td (Designed retrieval and agent systems with explicit failure handling and eval harnesses.) Tj ET
+0.45 0.85 0.18 rg
+49 432.5 m 53 435.5 l 49 438.5 l f
+0 0 0 rg
+BT /F1 9.5 Tf 60 431.5 Td (Owned production deploys on Vercel with Postgres + pgvector backends.) Tj ET
+BT /F2 10.5 Tf 48 416 Td (AI Engineering Student  ·  MiraCosta College) Tj ET
+BT /F1 9 Tf 480 416 Td (2024 - Present) Tj ET
+0.45 0.85 0.18 rg
+49 404.5 m 53 407.5 l 49 410.5 l f
+0 0 0 rg
+BT /F1 9.5 Tf 60 403.5 Td (Coursework in AI systems, data structures, and applied software engineering.) Tj ET
+0.45 0.85 0.18 rg
+49 393 m 53 396 l 49 399 l f
+0 0 0 rg
+BT /F1 9.5 Tf 60 392 Td (Independent work on retrieval, agents, and ontology-backed knowledge engines.) Tj ET
+0.4 0.4 0.4 rg
+BT /F2 8.5 Tf 48 376.5 Td (SKILLS) Tj ET
+0 0 0 rg
+BT /F2 9.5 Tf 48 364 Td (Languages:) Tj ET
+BT /F1 9.5 Tf 140 364 Td (TypeScript, Python, SQL, JavaScript) Tj ET
+BT /F2 9.5 Tf 48 351.5 Td (Frontend:) Tj ET
+BT /F1 9.5 Tf 140 351.5 Td (Next.js, React, Tailwind, Framer Motion) Tj ET
+BT /F2 9.5 Tf 48 339 Td (Backend & Data:) Tj ET
+BT /F1 9.5 Tf 140 339 Td (Node.js, Postgres, pgvector, route handlers, server actions) Tj ET
+BT /F2 9.5 Tf 48 326.5 Td (AI:) Tj ET
+BT /F1 9.5 Tf 140 326.5 Td (RAG, agentic workflows, tool orchestration, evals, knowledge graphs) Tj ET
+BT /F2 9.5 Tf 48 314 Td (Infra:) Tj ET
+BT /F1 9.5 Tf 140 314 Td (Vercel, GitHub Actions, Docker basics) Tj ET
+endstream
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 5 0 R /MediaBox [0 0 612 792] /Contents 1 0 R /Resources << /Font << /F1 2 0 R /F2 3 0 R >> >> >>
+endobj
+5 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000003996 00000 n 
+0000004066 00000 n 
+0000004141 00000 n 
+0000004277 00000 n 
+0000004334 00000 n 
+trailer
+<< /Size 7 /Root 6 0 R >>
+startxref
+4383
+%%EOF
