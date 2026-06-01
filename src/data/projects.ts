@@ -258,7 +258,7 @@ export const projects: Project[] = [
     accent: "magenta",
     links: [
       { label: "Live demo", href: "https://campuscompass-next.vercel.app/" },
-      { label: "GitHub", href: "https://github.com/sixscripts-ai/campus-compass" },
+      { label: "GitHub", href: "https://github.com/sixscripts-ai/campuscompass-next" },
       { label: "Architecture", href: "/projects/campus-compass#architecture" },
     ],
     problem:
@@ -360,7 +360,7 @@ export const projects: Project[] = [
     accent: "cyan",
     links: [
       { label: "Live demo", href: "https://webhookreplay-lab.vercel.app/" },
-      { label: "GitHub", href: "https://github.com/sixscripts-ai/portfolio-v2" },
+      { label: "GitHub", href: "https://github.com/sixscripts-ai/webhook-replay-lab" },
       { label: "Architecture", href: "/projects/webhook-replay-lab#architecture" },
       { label: "Case notes", href: "/projects/webhook-replay-lab#case" },
     ],
