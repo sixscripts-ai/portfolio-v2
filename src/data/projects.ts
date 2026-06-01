@@ -67,6 +67,7 @@ export const projects: Project[] = [
     status: "active",
     accent: "volt",
     links: [
+      { label: "Live demo", href: "https://dashboard-tau-three-30.vercel.app/" },
       { label: "GitHub", href: "https://github.com/sixscripts-ai/ghostssh" },
       { label: "Architecture", href: "/projects/ghostssh#architecture" },
       { label: "Case notes", href: "/projects/ghostssh#case" },
@@ -174,6 +175,7 @@ export const projects: Project[] = [
     status: "active",
     accent: "cyan",
     links: [
+      { label: "Live demo", href: "https://ict-knowledge-engine.vercel.app/" },
       { label: "GitHub", href: "https://github.com/sixscripts-ai/openai-ict-kg" },
       { label: "Architecture", href: "/projects/ict-knowledge-engine#architecture" },
       { label: "Evaluation", href: "/projects/ict-knowledge-engine#evals" },
@@ -255,8 +257,8 @@ export const projects: Project[] = [
     status: "shipped",
     accent: "magenta",
     links: [
+      { label: "Live demo", href: "https://campuscompass-next.vercel.app/" },
       { label: "GitHub", href: "https://github.com/sixscripts-ai/campus-compass" },
-      { label: "Live demo", href: "https://campuscompass-next.vercel.app" },
       { label: "Architecture", href: "/projects/campus-compass#architecture" },
     ],
     problem:
@@ -304,6 +306,7 @@ export const projects: Project[] = [
     status: "concept",
     accent: "amber",
     links: [
+      { label: "Live demo", href: "https://aqentix.me/" },
       { label: "Architecture", href: "/projects/aqentix#architecture" },
       { label: "Case notes", href: "/projects/aqentix#case" },
     ],
@@ -355,6 +358,7 @@ export const projects: Project[] = [
     status: "active",
     accent: "cyan",
     links: [
+      { label: "Live demo", href: "https://webhookreplay-lab.vercel.app/" },
       { label: "GitHub", href: "https://github.com/sixscripts-ai/portfolio-v2" },
       { label: "Architecture", href: "/projects/webhook-replay-lab#architecture" },
       { label: "Case notes", href: "/projects/webhook-replay-lab#case" },

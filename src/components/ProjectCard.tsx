@@ -71,17 +71,25 @@ export default function ProjectCard({ p, index = 0 }: { p: Project; index?: numb
       </div>
 
       <div className="mt-5 flex flex-wrap gap-2">
-        {p.links.map((l) => (
-          <a
-            key={l.label + l.href}
-            href={l.href}
-            target={l.href.startsWith("http") ? "_blank" : undefined}
-            rel={l.href.startsWith("http") ? "noreferrer" : undefined}
-            className="chip chip-volt hover:bg-[var(--volt)] hover:text-black transition-colors"
-          >
-            {l.label}
-          </a>
-        ))}
+        {p.links.map((l) => {
+          const isExternal = l.href.startsWith("http");
+          const sharedProps = {
+            key: l.label + l.href,
+            className: "chip chip-volt hover:bg-[var(--volt)] hover:text-black transition-colors",
+          };
+          if (isExternal) {
+            return (
+              <a href={l.href} target="_blank" rel="noreferrer" {...sharedProps}>
+                {l.label}
+              </a>
+            );
+          }
+          return (
+            <Link href={l.href} {...sharedProps}>
+              {l.label}
+            </Link>
+          );
+        })}
       </div>
     </motion.div>
   );
