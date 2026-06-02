@@ -67,7 +67,7 @@ export const projects: Project[] = [
     status: "active",
     accent: "volt",
     links: [
-      { label: "Live demo", href: "https://dashboard-tau-three-30.vercel.app/" },
+      { label: "Live demo", href: "https://ghostssh.vercel.app/" },
       { label: "GitHub", href: "https://github.com/sixscripts-ai/ghostssh" },
       { label: "Architecture", href: "/projects/ghostssh#architecture" },
       { label: "Case notes", href: "/projects/ghostssh#case" },
