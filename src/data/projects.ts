@@ -725,4 +725,76 @@ export const projects: Project[] = [
     ],
     nextImprovements: ["Add term-aware availability.", "Add user-saved plans.", "Add advisor-mode comments."],
   },
+  {
+    slug: "agent-skill-registry",
+    name: "Agent Skill Registry",
+    oneLiner:
+      "A comprehensive Universal AI Skill Lab—a centralized registry, builder, console, and runtime for developing portable, versioned, and auditable AI agent capabilities.",
+    description:
+      "Agent Skill Registry is a production-grade environment for managing the lifecycle of agentic capabilities. It abstracts complex LLM integrations into portable SKILL.md packages that can be built, governed, and shared. The platform features an embedded 'Librarian' AI archivist that intelligently routes natural language queries, cites internal skill logic, and stages safe command executions directly into a native terminal console. With multi-provider config routing (OpenAI, Gemini, Local LLMs), strict T1-T4 trust-tier governance gates, and an ultra-premium dark-mode UI, it represents a complete paradigm shift in how AI tools are managed.",
+    built: [
+      "Skill Registry & Builder",
+      "Native Console with natural language routing",
+      "Librarian AI archivist",
+      "Multi-provider config & Role routing",
+      "Trust Tier Governance (T1-T4)",
+    ],
+    owned: [
+      "Product direction",
+      "Full-stack architecture",
+      "AI workflow (Librarian)",
+      "UI/UX (omo.dev style)",
+    ],
+    stack: [
+      "React",
+      "Vite",
+      "TanStack Router",
+      "Tailwind v4",
+      "Express",
+      "Prisma",
+      "Postgres",
+      "Node.js",
+      "LLM Integration",
+    ],
+    tags: ["agentic", "fullstack", "ops"],
+    status: "shipped",
+    accent: "cyan",
+    links: [
+      { label: "Live demo", href: "https://agent-skill-registry.vercel.app/" },
+      { label: "GitHub", href: "https://github.com/sixscripts-ai/agent-skill-registry" },
+    ],
+    problem:
+      "Currently, AI capabilities are tightly coupled within monolithic agent codebases, making them nearly impossible to version, audit, or safely share across engineering teams. Agent Skill Registry solves this by isolating capabilities into portable, markdown-based skill packages. Combined with a secure execution console and strict trust-tier governance, it provides a unified source of truth where teams can build, govern, and interact with agent tools safely.",
+    architecture: {
+      nodes: [
+        { id: "ui", label: "React UI\n(TanStack Router)", lane: 0 },
+        { id: "console", label: "Native Console\n+ Librarian Panel", lane: 0 },
+        { id: "api", label: "Express API\n(Simulated Runtime)", lane: 1 },
+        { id: "registry", label: "Registry.yaml\n+ SKILL.md Bodies", lane: 1 },
+        { id: "db", label: "Postgres\n(Prisma)", lane: 2 },
+        { id: "llm", label: "Librarian Proxy\n(OpenAI / Gemini)", lane: 2 },
+      ],
+      edges: [
+        { from: "ui", to: "api" },
+        { from: "console", to: "api", label: "commands / chat" },
+        { from: "api", to: "registry", label: "load logic" },
+        { from: "api", to: "db", label: "persist state" },
+        { from: "api", to: "llm", label: "Librarian context" },
+      ],
+    },
+    dataModel: [
+      { name: "Skill", fields: ["id", "name", "description", "trust_tier", "body_path"] },
+      { name: "ProviderConfig", fields: ["id", "provider", "model", "routing_role"] },
+    ],
+    verification: [
+      "Run local stack: npm run dev:backend + npm run dev.",
+      "Verify Librarian provides accurate citations sourced from local SKILL.md files.",
+      "Test staging a ```console block from the Librarian panel directly into the console input.",
+    ],
+    nextImprovements: [
+      "Persist Librarian chat history server-side.",
+      "Add more SKILL.md bodies for registry skills.",
+      "Expose 'teach Librarian' flow from the Builder.",
+    ],
+  },
 ];
