@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import Terminal from "@/components/Terminal";
+import DemoReel from "@/components/DemoReel";
 import { projects } from "@/data/projects";
 import { evidence } from "@/data/evidence";
 import { Monitor, Server, Brain, Database, Terminal as TerminalIcon } from "lucide-react";
@@ -40,8 +41,16 @@ export default function Home() {
         <Terminal />
       </Section>
 
+      <Section eyebrow="03 / Demo" title="See the full experience.">
+        <p className="text-[var(--ink-muted)] max-w-2xl mb-10 leading-relaxed">
+          An auto-playing walkthrough of the portfolio — hero, roles, build log, projects, and
+          evidence. Each scene is a live view of what this site does.
+        </p>
+        <DemoReel />
+      </Section>
+
       <Section
-        eyebrow="03 / Technical evidence"
+        eyebrow="04 / Technical evidence"
         title="Skills and the projects that use them."
         cta={{ href: "/proof", label: "Full proof page" }}
       >
@@ -69,7 +78,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="04 / Interested" title="Where I fit best.">
+      <Section eyebrow="05 / Interested" title="Where I fit best.">
         <div className="card p-8 prose-tech">
           <p>
             <strong>Best fit:</strong> early-stage AI / product engineering. I own the whole stack
