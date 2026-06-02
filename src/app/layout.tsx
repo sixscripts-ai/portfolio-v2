@@ -57,6 +57,7 @@ export const metadata: Metadata = {
       "Retrieval systems, agentic workflows, and production-minded interfaces.",
   },
   robots: { index: true, follow: true },
+  icons: { icon: "/icon.svg" },
 };
 
 export default function RootLayout({

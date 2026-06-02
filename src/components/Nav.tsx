@@ -35,6 +35,7 @@ export default function Nav() {
               <Link
                 key={l.href}
                 href={l.href}
+                aria-current={active ? "page" : undefined}
                 className={clsx(
                   "px-3 py-2 rounded-md text-sm transition-colors relative",
                   active ? "text-[var(--ink)]" : "text-[var(--ink-muted)] hover:text-[var(--ink)]"
@@ -62,23 +63,28 @@ export default function Nav() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={open}
+          aria-controls="nav-menu"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
       {open && (
-        <div className="md:hidden border-t border-[var(--hairline)] bg-[var(--bg-raised)]">
+        <div id="nav-menu" className="md:hidden border-t border-[var(--hairline)] bg-[var(--bg-raised)]">
           <div className="max-w-6xl mx-auto px-5 py-3 flex flex-col gap-1">
-            {links.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="px-3 py-2 rounded-md text-sm text-[var(--ink-muted)] hover:text-[var(--ink)] hover:bg-white/[0.03]"
-              >
-                {l.label}
-              </Link>
-            ))}
+            {links.map((l) => {
+              const active = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active ? "page" : undefined}
+                  className="px-3 py-2 rounded-md text-sm text-[var(--ink-muted)] hover:text-[var(--ink)] hover:bg-white/[0.03]"
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
             <a
               href={profile.github}
               className="px-3 py-2 rounded-md text-sm text-[var(--ink-muted)] flex items-center gap-2"

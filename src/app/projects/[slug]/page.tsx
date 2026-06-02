@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { projects } from "@/data/projects";
 import Section from "@/components/Section";
@@ -54,18 +55,17 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           {p.links.map((l) => {
             const isExternal = l.href.startsWith("http");
             const sharedProps = {
-              key: l.label + l.href,
               className: "chip chip-volt hover:bg-[var(--volt)] hover:text-black transition-colors",
             };
             if (isExternal) {
               return (
-                <a href={l.href} target="_blank" rel="noreferrer" {...sharedProps}>
+                <a key={l.label + l.href} href={l.href} target="_blank" rel="noreferrer" {...sharedProps}>
                   {l.label}
                 </a>
               );
             }
             return (
-              <Link href={l.href} {...sharedProps}>
+              <Link key={l.label + l.href} href={l.href} {...sharedProps}>
                 {l.label}
               </Link>
             );
@@ -112,11 +112,12 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         <Section eyebrow="Screenshots" title="What the system looks like.">
           <div className="grid sm:grid-cols-2 gap-4">
             {p.screenshots.map((s) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 key={s.src}
                 src={s.src}
                 alt={s.alt}
+                width={1200}
+                height={800}
                 className="card w-full h-auto"
               />
             ))}

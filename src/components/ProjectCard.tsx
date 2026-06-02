@@ -74,18 +74,17 @@ export default function ProjectCard({ p, index = 0 }: { p: Project; index?: numb
         {p.links.map((l) => {
           const isExternal = l.href.startsWith("http");
           const sharedProps = {
-            key: l.label + l.href,
             className: "chip chip-volt hover:bg-[var(--volt)] hover:text-black transition-colors",
           };
           if (isExternal) {
             return (
-              <a href={l.href} target="_blank" rel="noreferrer" {...sharedProps}>
+              <a key={l.label + l.href} href={l.href} target="_blank" rel="noreferrer" {...sharedProps}>
                 {l.label}
               </a>
             );
           }
           return (
-            <Link href={l.href} {...sharedProps}>
+            <Link key={l.label + l.href} href={l.href} {...sharedProps}>
               {l.label}
             </Link>
           );
