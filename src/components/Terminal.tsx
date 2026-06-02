@@ -1,32 +1,39 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const lines = [
-  "$ git clone github.com/sixscripts-ai/portfolio-v2.git",
-  "Cloning into 'portfolio-v2'...",
+  "$ git clone github.com/sixscripts-ai/portfolio-v2",
+  "Receiving objects: 100% · done.",
   "$ pnpm install && pnpm dev",
-  "→ next.js 16 ready · http://localhost:3000",
-  "$ run evals/ghostssh-role-matching.md",
-  "✓ 3 / 3 cases · pass · partial · pass",
-  "$ deploy production",
-  "▮ ashtonaschenbrener-v2.vercel.app · 200 OK",
+  "✓ next.js 15 · ready at http://localhost:3000",
+  "$ npm run test",
+  "✓ 12 / 12 tests passed · 0 failures",
+  "$ git push origin main",
+  "▮ Vercel: deployment complete · 200 OK",
 ];
 
 export default function Terminal() {
   const [shown, setShown] = useState<string[]>([]);
+  const started = useRef(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
   useEffect(() => {
+    if (!inView || started.current) return;
+    started.current = true;
     let i = 0;
     const id = setInterval(() => {
       i += 1;
       setShown(lines.slice(0, i));
       if (i >= lines.length) clearInterval(id);
-    }, 420);
+    }, 400);
     return () => clearInterval(id);
-  }, []);
+  }, [inView]);
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}

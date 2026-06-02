@@ -14,14 +14,13 @@ export default function ContactPage() {
   )}&body=${encodeURIComponent(`${body}\n\n— ${name || ""} (${from || ""})`)}`;
 
   return (
-    <Section eyebrow="Contact" title="Best fit for early-stage AI / product engineering.">
-      <div className="grid lg:grid-cols-2 gap-6">
+    <Section eyebrow="Contact" title="Get in touch.">
+      <p className="text-[var(--ink-muted)] max-w-2xl mb-10 leading-relaxed">
+        Drop a note. I read everything. I&apos;m especially interested in early-stage AI / product
+        engineering roles where I can own features end-to-end — UI, retrieval, data model, deploys.
+      </p>
+        <div className="grid lg:grid-cols-2 gap-6">
         <div className="card p-6">
-          <p className="text-[var(--ink-muted)] leading-relaxed">
-            Drop a note. I read everything. I&apos;m especially interested in roles where I can
-            own UI and the AI orchestration layer.
-          </p>
-
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -64,12 +63,12 @@ export default function ContactPage() {
             <span className="inline-flex items-center gap-2"><Mail size={14} /> {profile.email}</span>
             <ArrowUpRight size={14} />
           </a>
-          <a href={profile.github} target="_blank" rel="noreferrer" className="btn justify-between">
-            <span className="inline-flex items-center gap-2"><Github size={14} /> sixscripts-ai</span>
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="btn justify-between">
+            <span className="inline-flex items-center gap-2"><Github size={14} /> {profile.github.replace("https://github.com/", "")}</span>
             <ArrowUpRight size={14} />
           </a>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer" className="btn justify-between">
-            <span className="inline-flex items-center gap-2"><Linkedin size={14} /> aaschenbrener</span>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="btn justify-between">
+            <span className="inline-flex items-center gap-2"><Linkedin size={14} /> {profile.linkedin.replace("https://www.linkedin.com/in/", "").replace("/", "")}</span>
             <ArrowUpRight size={14} />
           </a>
         </div>

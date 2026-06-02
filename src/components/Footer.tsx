@@ -14,10 +14,10 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <a className="btn" href={profile.github} target="_blank" rel="noreferrer">
+          <a className="btn" href={profile.github} target="_blank" rel="noopener noreferrer">
             <Github size={14} /> GitHub
           </a>
-          <a className="btn" href={profile.linkedin} target="_blank" rel="noreferrer">
+          <a className="btn" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
             <Linkedin size={14} /> LinkedIn
           </a>
           <a className="btn" href={`mailto:${profile.email}`}>

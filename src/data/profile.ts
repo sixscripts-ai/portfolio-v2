@@ -3,7 +3,6 @@ export const profile = {
   role: "Full-stack AI Engineer",
   email: "sixscripts@proton.me",
   github: "https://github.com/sixscripts-ai",
-  githubAlt: "https://github.com/sixscriptssoftware",
   linkedin: "https://www.linkedin.com/in/aaschenbrener/",
   resumePath: "/ashton-aschenbrener-resume.pdf",
   location: "California · Remote",
@@ -11,9 +10,9 @@ export const profile = {
     title: "Ashton Aschenbrener",
     subtitle: "Full-stack AI Engineer",
     pitch:
-      "I build retrieval systems, agentic workflows, and production-minded interfaces with Next.js, TypeScript, Python, and Postgres.",
+      "I design and ship production retrieval systems, agentic workflows, and end-to-end features using Next.js, TypeScript, Python, and Postgres.",
     looking:
-      "Looking for early-stage AI / product engineering roles where I can own frontend UI and backend AI orchestration.",
+      "Currently open to early-stage roles where I can own features end-to-end — from UI to AI orchestration.",
   },
   stack: [
     "Next.js",

@@ -15,7 +15,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug);
   if (!p) return {};
-  return { title: p.name, description: p.oneLiner };
+  const ogImage = p.screenshots?.[0]?.src
+    ? { url: p.screenshots[0].src, width: 1200, height: 800, alt: p.screenshots[0].alt }
+    : undefined;
+  return {
+    title: p.name,
+    description: p.oneLiner,
+    openGraph: {
+      title: `${p.name} · Ashton Aschenbrener`,
+      description: p.oneLiner,
+      type: "article",
+      ...(ogImage && { images: [ogImage] }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${p.name} · Ashton Aschenbrener`,
+      description: p.oneLiner,
+      ...(ogImage && { images: [ogImage] }),
+    },
+  };
 }
 
 const STATUS_COLOR = { shipped: "var(--volt)", active: "var(--cyan)", concept: "var(--amber)" } as const;

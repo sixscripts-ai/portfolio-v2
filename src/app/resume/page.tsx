@@ -7,7 +7,7 @@ import { Download, Printer } from "lucide-react";
 
 export default function ResumePage() {
   return (
-    <Section eyebrow="Resume" title="Selected technical work, systems experience, and project evidence.">
+    <Section eyebrow="Resume" title="Selected technical work, project evidence, and systems experience.">
       <div className="flex flex-wrap gap-3 mb-8 no-print">
         <a href={profile.resumePath} download className="btn btn-primary">
           <Download size={14} /> Download PDF
@@ -22,7 +22,7 @@ export default function ResumePage() {
           <h1 className="font-display text-3xl tracking-tight">{profile.name}</h1>
           <p className="text-[var(--ink-muted)] mt-1">{profile.role} · {profile.location}</p>
           <p className="font-mono text-xs text-[var(--ink-faint)] mt-2">
-            {profile.email} · {profile.github} · {profile.linkedin}
+            {profile.email} · {profile.github.replace("https://github.com/", "github.com/")} · {profile.linkedin.replace("https://www.linkedin.com/in/", "linkedin.com/in/").replace("/", "")}
           </p>
         </header>
 

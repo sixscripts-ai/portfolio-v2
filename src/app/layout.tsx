@@ -73,6 +73,42 @@ export default function RootLayout({
           Skip to content
         </a>
         <Nav />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  name: "Ashton Aschenbrener",
+                  url: "https://ashtonaschenbrener-v2.vercel.app",
+                  jobTitle: "Full-stack AI Engineer",
+                  knowsAbout: [
+                    "Next.js",
+                    "TypeScript",
+                    "Python",
+                    "Postgres",
+                    "RAG",
+                    "Agentic workflows",
+                    "LLM orchestration",
+                  ],
+                  sameAs: [
+                    "https://github.com/sixscripts-ai",
+                    "https://www.linkedin.com/in/aaschenbrener/",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  url: "https://ashtonaschenbrener-v2.vercel.app",
+                  name: "Ashton Aschenbrener — Full-stack AI Engineer",
+                  description:
+                    "Portfolio featuring retrieval systems, agentic workflows, and production-minded interfaces.",
+                },
+              ],
+            }),
+          }}
+        />
         <main id="main" className="flex-1">
           {children}
         </main>

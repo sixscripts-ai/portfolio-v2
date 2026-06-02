@@ -1,11 +1,13 @@
 export type EvidenceCategory = {
   area: "Frontend" | "Backend" | "AI systems" | "Data" | "Operations";
+  tagline: string;
   items: string[];
 };
 
 export const evidence: EvidenceCategory[] = [
   {
     area: "Frontend",
+    tagline: "App routing, responsive UI, accessible components",
     items: [
       "Next.js app routing (App Router, server actions, route handlers)",
       "Responsive UI with Tailwind and accessible primitives",
@@ -15,6 +17,7 @@ export const evidence: EvidenceCategory[] = [
   },
   {
     area: "Backend",
+    tagline: "API routes, Postgres schemas, validation at every boundary",
     items: [
       "API routes and server actions",
       "Postgres schemas with foreign keys and event tables",
@@ -24,6 +27,7 @@ export const evidence: EvidenceCategory[] = [
   },
   {
     area: "AI systems",
+    tagline: "RAG pipelines, agent loops, structured output schemas",
     items: [
       "RAG pipelines (semantic + graph hybrid)",
       "Agent workflows with plan → tool → verify loops",
@@ -33,6 +37,7 @@ export const evidence: EvidenceCategory[] = [
   },
   {
     area: "Data",
+    tagline: "Knowledge graphs, vector stores, structured evidence logs",
     items: [
       "Knowledge graphs and ontology design",
       "Vector + relational hybrid stores",
@@ -42,6 +47,7 @@ export const evidence: EvidenceCategory[] = [
   },
   {
     area: "Operations",
+    tagline: "Verification commands, failure handling, deployment notes",
     items: [
       "Verification commands documented per project",
       "Failure handling per pipeline stage",

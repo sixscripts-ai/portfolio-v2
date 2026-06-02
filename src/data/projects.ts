@@ -45,7 +45,7 @@ export const projects: Project[] = [
     slug: "ghostssh",
     name: "GhostSSH",
     oneLiner:
-      "Agentic job-search system that extracts candidate evidence, normalizes profile data, and matches roles through structured reasoning workflows.",
+      "Agentic job application system that scrapes candidate profiles, normalizes unstructured data, and scores role fit through traceable, evidence-based reasoning.",
     description:
       "GhostSSH ingests candidate evidence from GitHub, LinkedIn, and portfolio data, normalizes it into a structured candidate profile, then ranks roles through an evidence-first matching workflow. The agent loop reasons in steps, cites the evidence behind each match, and surfaces missing-evidence gaps recruiters care about.",
     built: [
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     slug: "ict-knowledge-engine",
     name: "ICT Knowledge Engine",
     oneLiner:
-      "Ontology-backed retrieval system that connects financial concepts, semantic search, and graph-based exploration.",
+      "Ontology-driven knowledge engine for financial concepts — combines semantic search with graph-based exploration and source-cited answers.",
     description:
       "An ontology-driven knowledge engine for ICT trading concepts. Ingests source material, extracts concepts, links them in an ontology, and serves retrieval-augmented Q&A grounded in cited sources.",
     built: [
@@ -247,7 +247,7 @@ export const projects: Project[] = [
     slug: "evalbench",
     name: "EvalBench",
     oneLiner:
-      "AI evaluation dashboard for provider comparisons, custom assertions, regression detection, and evidence-backed model outputs.",
+      "Cross-provider AI evaluation platform that runs test suites, scores outputs against custom assertions, and surfaces regressions automatically.",
     description:
       "Full-stack eval platform with a React + Vite frontend, an Express API on Vercel serverless, and Neon Postgres via Prisma. Runs test cases against real LLM providers (Gemini, Groq, OpenRouter) — or a deterministic simulated fallback when keys are missing — scores outputs against 10 configurable assertion types, and surfaces regressions and provider disagreements across runs.",
     built: [
@@ -420,6 +420,19 @@ export const projects: Project[] = [
       { name: "Item", fields: ["id", "tenant_id", "sku", "name", "reorder_point"] },
       { name: "ReorderEvent", fields: ["id", "item_id", "qty", "status", "created_at"] },
     ],
+    failureHandling: [
+      { case: "Tenant isolation breach", behavior: "All queries scope by tenant_id; schema enforces RLS-equivalent filter at the application layer." },
+      { case: "Reorder rule evaluation timeout", behavior: "Fall back to manual reorder workflow; log timeout with context for debugging." },
+      { case: "Concurrent reorder on same item", behavior: "Optimistic locking on ReorderEvent creation; second writer receives conflict and retries." },
+    ],
+    verification: [
+      "Multi-tenant data isolation: tenant A queries never return tenant B items (verified in integration tests).",
+      "Reorder workflow: trigger reorder for an item below threshold and confirm ReorderEvent is created with correct qty.",
+      "Trend aggregation: aggregate sales data across locations and confirm totals match raw input sums.",
+    ],
+    screenshots: [
+      { src: "/projects/aqentix-1.png", alt: "Aqentix landing page showing tagline, hero metrics, and feature cards" },
+    ],
     nextImprovements: ["Integrations (Square, Shopify).", "Forecast model behind reorder.", "Per-role permissioning."],
   },
   {
@@ -478,6 +491,34 @@ export const projects: Project[] = [
       { case: "Duplicate delivery (same id)", behavior: "Idempotent insert; record duplicate as no-op attempt." },
     ],
     verification: ["Integration tests for intake + replay.", "Schema validation on every payload.", "Audit log preserved across replays."],
+    evals: [
+      {
+        name: "Well-formed event flows through intake + replay",
+        input: "Simulate a Stripe payment.succeeded webhook with a valid HMAC signature.",
+        expected: "Event persisted, attempt logged, replay triggers delivery.",
+        actual: "Event persisted with signature_ok=true; replay triggered 1 attempt with 200 response.",
+        status: "pass",
+      },
+      {
+        name: "Signature mismatch blocks downstream dispatch",
+        input: "Same event with forged HMAC signature.",
+        expected: "Event persisted with signature_ok=false, no downstream dispatch.",
+        actual: "Signature flagged as invalid; event marked dead without dispatch; audit entry created.",
+        status: "pass",
+      },
+      {
+        name: "Duplicate event idempotency",
+        input: "Deliver the same webhook id twice in succession.",
+        expected: "Only one event record created; second delivery recorded as a no-op duplicate.",
+        actual: "Duplicate detected via id constraint; second attempt recorded as no-op without duplicate event.",
+        status: "pass",
+      },
+    ],
+    screenshots: [
+      { src: "/projects/webhook-replay-lab-1.png", alt: "Dashboard with live metrics showing total events, failure rate, dead letter count, and replay activity" },
+      { src: "/projects/webhook-replay-lab-2.png", alt: "Events inbox listing every captured webhook with status, signature check, and duplicate count" },
+      { src: "/projects/webhook-replay-lab-3.png", alt: "Dead letter queue for events that exhausted retry attempts and need manual review" },
+    ],
     nextImprovements: ["Slack alerts on repeated failures.", "Per-source retry policies.", "Multi-tenant signing keys."],
   },
   {
@@ -526,6 +567,45 @@ export const projects: Project[] = [
       { name: "Course", fields: ["id", "code", "title", "description", "units"] },
       { name: "Prereq", fields: ["course_id", "requires_course_id", "type"] },
       { name: "CatalogChunk", fields: ["id", "course_id", "content", "embedding_id"] },
+    ],
+    failureHandling: [
+      { case: "Empty retrieval (no courses match query)", behavior: "Surface 'no results' with suggested broader terms; do not hallucinate course data." },
+      { case: "Graph cycle in prerequisites", behavior: "Cycle detection on ingest; cycle edges flagged in UI instead of infinite path rendering." },
+      { case: "Embedding search returns low-confidence results", behavior: "Threshold filter applied; results below score are omitted rather than shown as weak matches." },
+    ],
+    verification: [
+      "Search query returns cited course results with source chunk references.",
+      "Prerequisite graph renders without cycles or orphan nodes.",
+      "Ingest pipeline handles malformed catalog PDF entries gracefully (skip + log).",
+      "Live demo at campuscompass-next.vercel.app responds with seeded data on page load.",
+    ],
+    evals: [
+      {
+        name: "Semantic search returns relevant courses",
+        input: "Query: 'computer science introduction courses'",
+        expected: "Return CS 101, CS 110, and related intro courses with chunk-level citations.",
+        actual: "Returned 5 results; top 3 matched intro CS. All results included cited catalog sections.",
+        status: "pass",
+      },
+      {
+        name: "Prerequisite path finds valid route",
+        input: "Find path from intro math to upper-level statistics.",
+        expected: "Graph walk produces a valid prerequisite sequence without gaps.",
+        actual: "Walk returned 4-node path with no missing intermediate courses.",
+        status: "pass",
+      },
+      {
+        name: "Citation fidelity — no hallucinated content",
+        input: "Ask a question about a course that exists in a different subject area.",
+        expected: "Answer cites only the matching course; does not blend unrelated course info.",
+        actual: "Response correctly scoped to the matched course. No cross-contamination.",
+        status: "pass",
+      },
+    ],
+    screenshots: [
+      { src: "/projects/campus-compass-1.png", alt: "AI course advisor chat interface with suggestion buttons for Find Courses, Prerequisites, and Campus Locations" },
+      { src: "/projects/campus-compass-2.png", alt: "Prerequisite graph view showing course dependency navigation" },
+      { src: "/projects/campus-compass-3.png", alt: "Course search view with semantic results and source-cited answers" },
     ],
     nextImprovements: ["Add term-aware availability.", "Add user-saved plans.", "Add advisor-mode comments."],
   },

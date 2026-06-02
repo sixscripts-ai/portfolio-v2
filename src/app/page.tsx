@@ -4,7 +4,16 @@ import ProjectCard from "@/components/ProjectCard";
 import Terminal from "@/components/Terminal";
 import { projects } from "@/data/projects";
 import { evidence } from "@/data/evidence";
+import { Monitor, Server, Brain, Database, Terminal as TerminalIcon } from "lucide-react";
 import Link from "next/link";
+
+const evidenceIcon: Record<string, React.ReactNode> = {
+  Frontend: <Monitor size={16} />,
+  Backend: <Server size={16} />,
+  "AI systems": <Brain size={16} />,
+  Data: <Database size={16} />,
+  Operations: <TerminalIcon size={16} />,
+};
 
 export default function Home() {
   const featured = projects.slice(0, 4);
@@ -24,18 +33,29 @@ export default function Home() {
       </Section>
 
       <Section eyebrow="02 / Build log" title="What it looks like to ship.">
+        <p className="text-[var(--ink-muted)] max-w-2xl mb-8 leading-relaxed">
+          A simulated build trace — clone, install, test, deploy. The commands and checkpoints that
+          happen every time I ship something real.
+        </p>
         <Terminal />
       </Section>
 
       <Section
         eyebrow="03 / Technical evidence"
-        title="Skills, with the proof attached."
+        title="Skills and the projects that use them."
         cta={{ href: "/proof", label: "Full proof page" }}
       >
+        <p className="text-[var(--ink-muted)] max-w-2xl mb-10 leading-relaxed">
+          Every capability organized by area. Each item is something I&apos;ve built and shipped — no hand-waving.
+        </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {evidence.map((e) => (
             <div key={e.area} className="card p-5">
-              <p className="label mb-2">{e.area}</p>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-[var(--volt)]">{evidenceIcon[e.area]}</span>
+                <p className="label">{e.area}</p>
+              </div>
+              <p className="text-xs text-[var(--ink-faint)] mb-3 leading-relaxed">{e.tagline}</p>
               <ul className="text-sm text-[var(--ink-muted)] space-y-1.5">
                 {e.items.slice(0, 4).map((i) => (
                   <li key={i} className="flex gap-2">
@@ -49,15 +69,15 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="04 / What's next" title="Hiring me looks like this.">
+      <Section eyebrow="04 / Interested" title="Where I fit best.">
         <div className="card p-8 prose-tech">
           <p>
-            <strong>Best fit:</strong> early-stage AI / product engineering. I want to own a real
-            slice end-to-end — UI, retrieval / agent layer, data model, deploys.
+            <strong>Best fit:</strong> early-stage AI / product engineering. I own the whole stack
+            end-to-end — UI, retrieval and agent layers, data model, deploys, evals.
           </p>
           <p>
-            <strong>Strongest signal:</strong> projects that ship with eval harnesses, failure
-            handling, and audit logs — not demo videos.
+            <strong>What you get:</strong> projects that ship with eval harnesses, failure handling,
+            audit logs, and a verification checklist — not a demo video and a prayer.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/contact" className="btn btn-primary">Get in touch →</Link>

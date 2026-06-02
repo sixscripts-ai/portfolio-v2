@@ -71,7 +71,7 @@ export default function Hero() {
           <a href={profile.resumePath} download className="btn">
             <Download size={14} /> Download resume
           </a>
-          <a href={profile.github} target="_blank" rel="noreferrer" className="btn">
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="btn">
             <Github size={14} /> GitHub
           </a>
         </motion.div>
