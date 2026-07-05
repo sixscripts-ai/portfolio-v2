@@ -42,6 +42,63 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "agent-skill-marketplace",
+    name: "Agent Skill Marketplace",
+    oneLiner: "Portfolio-grade marketplace for discovering, sandbox-testing, evaluating, versioning, and exporting portable AI agent skills (SKILL.md).",
+    description: "A production-minded SaaS platform for the full lifecycle of reusable agent skills. Users browse categorized skills with eval scores and run counts, test them in a live browser sandbox with permissioned execution and detailed trace events (latency, cost, blocked commands), build and publish new skills, compare versions with SKILL.md diffs, run evaluation suites with regression detection, and one-click export/install skills directly into Codex, Claude, Antigravity, OpenCode, Grok, and VS Code. Built as a Next.js App Router application with a Prisma-backed data model on Postgres.",
+    built: [
+      "Marketplace discovery, filtering & skill cards UI",
+      "In-browser sandbox runner with live traces & permission approvals",
+      "Skill builder with validation, preview, test run & publish flow",
+      "Version history with SKILL.md comparison & diffing",
+      "Evaluation suites + regression indicators",
+      "One-click install/export adapters for multiple AI tools & editors",
+    ],
+    owned: [
+      "Product direction & marketplace positioning",
+      "Full-stack implementation (Next.js App Router + Prisma)",
+      "Sandbox runtime semantics, trace model & permission system",
+      "Skill packaging standards & export/install flows",
+      "Developer experience & UI/UX",
+    ],
+    stack: ["Next.js App Router", "TypeScript", "Tailwind CSS", "Prisma", "Postgres", "Vercel"],
+    tags: ["agentic", "marketplace", "evals", "fullstack", "ops"],
+    status: "active",
+    accent: "cyan",
+    links: [
+      { label: "Live demo", href: "https://agent-skill-marketplace.vercel.app/marketplace" },
+      { label: "GitHub", href: "https://github.com/sixscripts-ai/agent-skill-marketplace.git" },
+    ],
+    problem: "AI agent capabilities are currently locked inside individual monolithic codebases, making them difficult to discover, trust, safely test, version, or share across teams. The marketplace turns skills into portable, evaluated, sandbox-testable SKILL.md packages with clear governance, execution traces, and easy installation into popular developer tools.",
+    architecture: {
+      nodes: [
+        { id: "ui", label: "Next.js Marketplace UI\n(cards, filters, builder)", lane: 0 },
+        { id: "api", label: "API routes + server actions", lane: 0 },
+        { id: "sandbox", label: "Browser Sandbox Runner\n(traces, permissions, cost/latency)", lane: 1 },
+        { id: "builder", label: "Skill Builder + Validator\n+ preview & test run", lane: 1 },
+        { id: "registry", label: "SKILL.md Registry\n+ versioning & diffs", lane: 1 },
+        { id: "db", label: "Postgres (Prisma ORM)", lane: 2 },
+        { id: "exports", label: "Install/Export Adapters\n(Codex, Claude, VS Code, etc.)", lane: 2 },
+      ],
+      edges: [
+        { from: "ui", to: "api" },
+        { from: "api", to: "sandbox", label: "run / trace" },
+        { from: "api", to: "builder" },
+        { from: "api", to: "registry" },
+        { from: "api", to: "db" },
+        { from: "registry", to: "exports" },
+        { from: "sandbox", to: "ui", label: "live traces" },
+      ],
+    },
+    nextImprovements: [
+      "Real isolated execution sandbox (beyond deterministic mock)",
+      "Auth, user accounts, publishing workflow & fork tracking",
+      "Public skill submission + community review process",
+      "Richer eval harness with LLM-as-judge + custom metrics",
+      "Analytics dashboard for skill usage & performance trends",
+   ],
+  },
+  {
     slug: "ghostssh",
     name: "GhostSSH",
     oneLiner:
