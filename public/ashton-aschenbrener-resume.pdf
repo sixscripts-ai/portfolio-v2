@@ -1,89 +1,96 @@
 %PDF-1.4
 1 0 obj
-<< /Length 3935 >>
+<< /Length 5596 >>
 stream
 0 0 0 rg
-BT /F2 22 Tf 48 744 Td (Ashton Aschenbrener) Tj ET
-0.45 0.85 0.18 rg
-BT /F2 11 Tf 48 722 Td (FULL-STACK AI ENGINEER) Tj ET
+BT /F2 21 Tf 42 750 Td (Ashton Aschenbrener) Tj ET
+0.1 0.1 0.1 rg
+BT /F2 10.5 Tf 42 730 Td (FULL-STACK AI ENGINEER) Tj ET
 0 0 0 rg
-BT /F1 9 Tf 48 708 Td (California / Remote  �  sixscripts@proton.me  �  github.com/sixscripts-ai  �  linkedin.com/in/aaschenbrener) Tj ET
-0.85 0.85 0.85 RG
-0.5 w 48 698 m 564 698 l S
-0.4 0.4 0.4 rg
-BT /F2 8.5 Tf 48 682 Td (SUMMARY) Tj ET
+BT /F1 8.5 Tf 42 717 Td (California / Remote  |  sixscripts@proton.me  |  github.com/sixscripts-ai  |  linkedin.com/in/aaschenbrener) Tj ET
+0.82 0.82 0.82 RG
+0.5 w 42 708 m 570 708 l S
+0.35 0.35 0.35 rg
+BT /F2 8.2 Tf 42 694 Td (SUMMARY) Tj ET
 0 0 0 rg
-BT /F1 10 Tf 48 669.5 Td (Full-stack AI engineer focused on retrieval systems, agentic workflows, and product interfaces) Tj ET
-BT /F1 10 Tf 48 657 Td (with Next.js, TypeScript, Python, and Postgres.) Tj ET
-0.4 0.4 0.4 rg
-BT /F2 8.5 Tf 48 640.5 Td (PROJECTS) Tj ET
+BT /F1 9.2 Tf 42 682.8 Td (Full-stack AI engineer focused on evidence-first AI systems: agent workflows, retrieval infrastructure,) Tj ET
+BT /F1 9.2 Tf 42 671.5999999999999 Td (eval harnesses, and product interfaces with Next.js, TypeScript, Python, and Postgres.) Tj ET
+0.35 0.35 0.35 rg
+BT /F2 8.2 Tf 42 657.3999999999999 Td (PROJECTS) Tj ET
 0 0 0 rg
-0.45 0.85 0.18 rg
-49 629 m 53 632 l 49 635 l f
+0.1 0.1 0.1 rg
+43 647.1999999999998 m 47 650.1999999999998 l 43 653.1999999999998 l f
 0 0 0 rg
-BT /F1 10 Tf 60 628 Td (Built GhostSSH, an agentic job-search workflow that extracts candidate evidence from) Tj ET
-BT /F1 10 Tf 60 615.5 Td (GitHub, LinkedIn, and portfolio data, then ranks roles through structured matching logic.) Tj ET
-0.45 0.85 0.18 rg
-49 602 m 53 605 l 49 608 l f
+BT /F1 9.1 Tf 54 646.1999999999998 Td (Built Agent Skill Registry, a portable SKILL.md registry, builder, console, and runtime for) Tj ET
+BT /F1 9.1 Tf 54 635.2999999999998 Td (versioned agent capabilities with trust-tier governance, multi-provider routing, and a Librarian AI) Tj ET
+BT /F1 9.1 Tf 54 624.3999999999999 Td (workflow.) Tj ET
+0.1 0.1 0.1 rg
+43 612.9999999999999 m 47 615.9999999999999 l 43 618.9999999999999 l f
 0 0 0 rg
-BT /F1 10 Tf 60 601 Td (Designed ICT Knowledge Engine, an ontology-backed retrieval system that connects financial) Tj ET
-BT /F1 10 Tf 60 588.5 Td (concepts, semantic search, and graph-based exploration.) Tj ET
-0.45 0.85 0.18 rg
-49 575 m 53 578 l 49 581 l f
+BT /F1 9.1 Tf 54 611.9999999999999 Td (Built EvalBench, an AI evaluation dashboard for provider comparisons, custom assertions, regression) Tj ET
+BT /F1 9.1 Tf 54 601.0999999999999 Td (detection, and evidence-backed model outputs using React, Express, Prisma, Neon Postgres, Gemini,) Tj ET
+BT /F1 9.1 Tf 54 590.1999999999999 Td (Groq, and OpenRouter.) Tj ET
+0.1 0.1 0.1 rg
+43 578.8 m 47 581.8 l 43 584.8 l f
 0 0 0 rg
-BT /F1 10 Tf 60 574 Td (Built Campus Compass, a campus information assistant with semantic course search,) Tj ET
-BT /F1 10 Tf 60 561.5 Td (source-aware retrieval, and prerequisite graph navigation.) Tj ET
-0.45 0.85 0.18 rg
-49 548 m 53 551 l 49 554 l f
+BT /F1 9.1 Tf 54 577.8 Td (Built GhostSSH, an agentic job-search workflow that extracts candidate evidence from GitHub,) Tj ET
+BT /F1 9.1 Tf 54 566.9 Td (LinkedIn, and portfolio data, then ranks roles through structured matching logic and) Tj ET
+BT /F1 9.1 Tf 54 556 Td (missing-evidence checks.) Tj ET
+0.1 0.1 0.1 rg
+43 544.6 m 47 547.6 l 43 550.6 l f
 0 0 0 rg
-BT /F1 10 Tf 60 547 Td (Developed Aqentix, a multi-location inventory intelligence concept with reorder workflows,) Tj ET
-BT /F1 10 Tf 60 534.5 Td (trend visualization, and integration-ready data modeling.) Tj ET
-0.45 0.85 0.18 rg
-49 521 m 53 524 l 49 527 l f
+BT /F1 9.1 Tf 54 543.6 Td (Designed ICT Knowledge Engine, an ontology-backed retrieval system that connects financial) Tj ET
+BT /F1 9.1 Tf 54 532.7 Td (concepts, semantic search, graph-based exploration, and source-cited answers.) Tj ET
+0.1 0.1 0.1 rg
+43 521.3000000000001 m 47 524.3000000000001 l 43 527.3000000000001 l f
 0 0 0 rg
-BT /F1 10 Tf 60 520 Td (Built Webhook Replay Lab, a backend reliability tool that stores, audits, and replays) Tj ET
-BT /F1 10 Tf 60 507.5 Td (webhook deliveries with per-attempt history.) Tj ET
-0.4 0.4 0.4 rg
-BT /F2 8.5 Tf 48 491 Td (EXPERIENCE) Tj ET
+BT /F1 9.1 Tf 54 520.3000000000001 Td (Built SignalForge, a data import and validation platform with CSV/JSON upload, Zod schema) Tj ET
+BT /F1 9.1 Tf 54 509.4000000000001 Td (validation, deduplication, audit trails, RBAC-ready data modeling, and quality analytics.) Tj ET
+0.35 0.35 0.35 rg
+BT /F2 8.2 Tf 42 496.0000000000001 Td (EXPERIENCE) Tj ET
 0 0 0 rg
-BT /F2 10.5 Tf 48 478.5 Td (Founder & Engineer  �  Six Scripts Software \(Independent\)) Tj ET
-BT /F1 9 Tf 480 478.5 Td (2024 - Present) Tj ET
-0.45 0.85 0.18 rg
-49 467 m 53 470 l 49 473 l f
+BT /F2 9.8 Tf 42 484.8000000000001 Td (Founder & Engineer  |  Independent / Six Scripts Software) Tj ET
+BT /F1 8.5 Tf 494.4 484.8000000000001 Td (2024 - Present) Tj ET
+0.1 0.1 0.1 rg
+43 475.10000000000014 m 47 478.10000000000014 l 43 481.10000000000014 l f
 0 0 0 rg
-BT /F1 9.5 Tf 60 466 Td (Ship full-stack AI products end-to-end: product, UI, backend, data model, AI workflow,) Tj ET
-BT /F1 9.5 Tf 60 454.5 Td (verification.) Tj ET
-0.45 0.85 0.18 rg
-49 444 m 53 447 l 49 450 l f
+BT /F1 8.9 Tf 54 474.10000000000014 Td (Ship full-stack AI products end-to-end: product direction, UI, backend, data model, AI workflow,) Tj ET
+BT /F1 8.9 Tf 54 464.10000000000014 Td (verification, and deployment.) Tj ET
+0.1 0.1 0.1 rg
+43 455.10000000000014 m 47 458.10000000000014 l 43 461.10000000000014 l f
 0 0 0 rg
-BT /F1 9.5 Tf 60 443 Td (Designed retrieval and agent systems with explicit failure handling and eval harnesses.) Tj ET
-0.45 0.85 0.18 rg
-49 432.5 m 53 435.5 l 49 438.5 l f
+BT /F1 8.9 Tf 54 454.10000000000014 Td (Designed retrieval and agent systems with explicit failure handling, traceable outputs, source) Tj ET
+BT /F1 8.9 Tf 54 444.10000000000014 Td (grounding, and eval harnesses.) Tj ET
+0.1 0.1 0.1 rg
+43 435.10000000000014 m 47 438.10000000000014 l 43 441.10000000000014 l f
 0 0 0 rg
-BT /F1 9.5 Tf 60 431.5 Td (Owned production deploys on Vercel with Postgres + pgvector backends.) Tj ET
-BT /F2 10.5 Tf 48 416 Td (AI Engineering Student  �  MiraCosta College) Tj ET
-BT /F1 9 Tf 480 416 Td (2024 - Present) Tj ET
-0.45 0.85 0.18 rg
-49 404.5 m 53 407.5 l 49 410.5 l f
+BT /F1 8.9 Tf 54 434.10000000000014 Td (Deployed production-facing projects on Vercel with Postgres-backed data layers, provider API) Tj ET
+BT /F1 8.9 Tf 54 424.10000000000014 Td (integrations, Prisma/Drizzle schemas, and environment configuration.) Tj ET
+BT /F2 9.8 Tf 42 411.10000000000014 Td (AI Engineering Student  |  MiraCosta College) Tj ET
+BT /F1 8.5 Tf 494.4 411.10000000000014 Td (2024 - Present) Tj ET
+0.1 0.1 0.1 rg
+43 401.40000000000015 m 47 404.40000000000015 l 43 407.40000000000015 l f
 0 0 0 rg
-BT /F1 9.5 Tf 60 403.5 Td (Coursework in AI systems, data structures, and applied software engineering.) Tj ET
-0.45 0.85 0.18 rg
-49 393 m 53 396 l 49 399 l f
+BT /F1 8.9 Tf 54 400.40000000000015 Td (Coursework focused on AI systems, data structures, and applied software engineering.) Tj ET
+0.1 0.1 0.1 rg
+43 391.40000000000015 m 47 394.40000000000015 l 43 397.40000000000015 l f
 0 0 0 rg
-BT /F1 9.5 Tf 60 392 Td (Independent work on retrieval, agents, and ontology-backed knowledge engines.) Tj ET
-0.4 0.4 0.4 rg
-BT /F2 8.5 Tf 48 376.5 Td (SKILLS) Tj ET
+BT /F1 8.9 Tf 54 390.40000000000015 Td (Independent projects on retrieval, agents, ontology-backed knowledge engines, and evaluation) Tj ET
+BT /F1 8.9 Tf 54 380.40000000000015 Td (infrastructure.) Tj ET
+0.35 0.35 0.35 rg
+BT /F2 8.2 Tf 42 367.40000000000015 Td (SKILLS) Tj ET
 0 0 0 rg
-BT /F2 9.5 Tf 48 364 Td (Languages:) Tj ET
-BT /F1 9.5 Tf 140 364 Td (TypeScript, Python, SQL, JavaScript) Tj ET
-BT /F2 9.5 Tf 48 351.5 Td (Frontend:) Tj ET
-BT /F1 9.5 Tf 140 351.5 Td (Next.js, React, Tailwind, Framer Motion) Tj ET
-BT /F2 9.5 Tf 48 339 Td (Backend & Data:) Tj ET
-BT /F1 9.5 Tf 140 339 Td (Node.js, Postgres, pgvector, route handlers, server actions) Tj ET
-BT /F2 9.5 Tf 48 326.5 Td (AI:) Tj ET
-BT /F1 9.5 Tf 140 326.5 Td (RAG, agentic workflows, tool orchestration, evals, knowledge graphs) Tj ET
-BT /F2 9.5 Tf 48 314 Td (Infra:) Tj ET
-BT /F1 9.5 Tf 140 314 Td (Vercel, GitHub Actions, Docker basics) Tj ET
+BT /F2 8.8 Tf 42 356.20000000000016 Td (Languages:) Tj ET
+BT /F1 8.8 Tf 130 356.20000000000016 Td (TypeScript, Python, SQL, JavaScript) Tj ET
+BT /F2 8.8 Tf 42 345.70000000000016 Td (Frontend:) Tj ET
+BT /F1 8.8 Tf 130 345.70000000000016 Td (Next.js, React, Tailwind, Framer Motion, shadcn-style UI) Tj ET
+BT /F2 8.8 Tf 42 335.20000000000016 Td (Backend & Data:) Tj ET
+BT /F1 8.8 Tf 130 335.20000000000016 Td (Node.js, Express, Postgres, Neon, Prisma, Drizzle, Zod, route handlers, server actions) Tj ET
+BT /F2 8.8 Tf 42 324.70000000000016 Td (AI:) Tj ET
+BT /F1 8.8 Tf 130 324.70000000000016 Td (RAG, agentic workflows, tool orchestration, evals, provider comparisons, hybrid) Tj ET
+BT /F1 8.8 Tf 130 314.20000000000016 Td (retrieval, knowledge graphs) Tj ET
+BT /F2 8.8 Tf 42 303.70000000000016 Td (Infra:) Tj ET
+BT /F1 8.8 Tf 130 303.70000000000016 Td (Vercel, GitHub Actions, Docker basics, Neon Postgres, Clerk, Vitest) Tj ET
 endstream
 endobj
 2 0 obj
@@ -105,13 +112,13 @@ xref
 0 7
 0000000000 65535 f 
 0000000009 00000 n 
-0000003996 00000 n 
-0000004066 00000 n 
-0000004141 00000 n 
-0000004277 00000 n 
-0000004334 00000 n 
+0000005657 00000 n 
+0000005727 00000 n 
+0000005802 00000 n 
+0000005938 00000 n 
+0000005995 00000 n 
 trailer
 << /Size 7 /Root 6 0 R >>
 startxref
-4383
+6044
 %%EOF
